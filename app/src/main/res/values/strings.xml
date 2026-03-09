@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">ProjectExpenseTrackerAdmin</string>
+    <string-array name="project_status">
+        <item>Active</item>
+        <item>Completed</item>
+        <item>On Hold</item>
+    </string-array>
+    <string-array name="priority_levels">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="expense_types">
+        <item>Travel</item>
+        <item>Equipment</item>
+        <item>Materials</item>
+        <item>Services</item>
+        <item>Software/Licenses</item>
+        <item>Labour costs</item>
+        <item>Utilities</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
+    <string-array name="payment_methods">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Bank Transfer</item>
+        <item>Cheque</item>
+    </string-array>
+
+    <string-array name="payment_statuses">
+        <item>Paid</item>
+        <item>Pending</item>
+        <item>Reimbursed</item>
+    </string-array>
+
+    <string-array name="currencies">
+        <item>MMK</item>
+        <item>USD</item>
+        <item>GBP</item>
+        <item>EUR</item>
+    </string-array>
+</resources>

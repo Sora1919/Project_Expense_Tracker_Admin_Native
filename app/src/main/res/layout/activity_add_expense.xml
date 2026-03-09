@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Expense"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Expense ID (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilExpenseId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expense ID *"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etExpenseId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Date of expense (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilExpenseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Date of Expense *"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etExpenseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:cursorVisible="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Amount (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Amount *"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Currency (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Currency *"
+            app:errorEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/currencies" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Type of Expense (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilExpenseType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Type of Expense *"
+            app:errorEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerExpenseType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/expense_types" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Payment Method (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Payment Method *"
+            app:errorEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/payment_methods" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Claimant (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilClaimant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Claimant *"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etClaimant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Payment Status (Required) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPaymentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Payment Status *"
+            app:errorEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerPaymentStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/payment_statuses" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Description (Optional) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Description (optional)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="2"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Location (Optional) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Location (optional)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveExpense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Save Expense"
+            android:backgroundTint="@color/design_default_color_secondary_variant"/>
+
+    </LinearLayout>
+</ScrollView>
