@@ -18,11 +18,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddExpense"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Add Expense"
-        android:backgroundTint="@color/design_default_color_secondary_variant"/>
+        android:textColor="@android:color/holo_blue_light"
+        android:text="Add Expense"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSyncFromCloud"

@@ -4,70 +4,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="14dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnUploadAll"
+    <!-- Header / Controls Card -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Upload All Projects to Cloud"
-        app:backgroundTint="@android:color/holo_blue_light" />
+        android:layout_marginTop="20dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="2dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAddProject"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Add Project"
-            app:backgroundTint="@color/design_default_color_secondary_variant"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnResetDb"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:text="Reset DB"
-            app:backgroundTint="@android:color/holo_red_light" />
-    </LinearLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnDashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Dashboard Summary"
-        app:backgroundTint="@android:color/holo_blue_light" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:hint="Search by name or description">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etSearch"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical"
+            android:padding="14dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFilters"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Advanced Filters"
-        app:backgroundTint="@android:color/holo_blue_light"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Projects"
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Manage projects, expenses, search, and cloud upload."
+                android:textSize="13sp"
+                android:alpha="0.7" />
+
+            <!-- Primary actions -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUploadAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Upload All to Cloud"
+                app:icon="@android:drawable/ic_menu_upload"
+                app:iconGravity="textStart"
+                app:cornerRadius="14dp"
+                app:backgroundTint="@android:color/holo_blue_light" />
+
+            <!-- Secondary actions row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddProject"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Add"
+                    android:textColor="@android:color/holo_blue_light"
+                    app:cornerRadius="14dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDashboard"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="Dashboard"
+                    android:textColor="@android:color/holo_blue_light"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+
+            <!-- Danger action -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetDb"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Reset Local DB"
+                app:strokeColor="@android:color/holo_red_dark"
+                android:textColor="@android:color/holo_red_dark"
+                app:cornerRadius="14dp" />
+
+            <!-- Search -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Search by name or description"
+                app:startIconDrawable="@android:drawable/ic_menu_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFilters"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Advanced Filters"
+                app:icon="@android:drawable/ic_menu_sort_by_size"
+                app:iconGravity="textStart"
+                android:textColor="@android:color/holo_blue_light"
+                app:cornerRadius="14dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProjects"
         android:layout_width="match_parent"

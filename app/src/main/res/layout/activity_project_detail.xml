@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
     <LinearLayout
@@ -32,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Manage Expenses"
-            android:backgroundTint="@color/design_default_color_secondary_variant"/>
+            app:backgroundTint="@android:color/holo_blue_light"/>
 
     </LinearLayout>
 </ScrollView>

@@ -43,20 +43,25 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEdit"
+                style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Edit"
-                app:backgroundTint="@color/design_default_color_secondary_variant"/>
+                android:textColor="@android:color/holo_blue_light"
+                app:cornerRadius="14dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDelete"
+                style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="10dp"
                 android:text="Delete"
-                app:backgroundTint="@android:color/holo_red_light" />
+                app:strokeColor="@android:color/holo_red_dark"
+                android:textColor="@android:color/holo_red_dark"
+                app:cornerRadius="14dp" />
         </LinearLayout>
 
     </LinearLayout>
